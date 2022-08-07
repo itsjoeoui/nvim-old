@@ -7,3 +7,5 @@ function CureMyEyes()
     vim.cmd("colorscheme " .. vim.g.itsjoeoui_colorscheme)
 end
 CureMyEyes()
+
+require('lualine').setup()
