@@ -73,9 +73,19 @@ require('lspconfig').tsserver.setup {
 require('lspconfig').bashls.setup {
     capabilities = capabilities
 }
-require('lspconfig').gopls.setup {
-    capabilities = capabilities
+require("lspconfig").gopls.setup {
+    capabilities = capabilities,
+	cmd = { "gopls", "serve" },
+	settings = {
+		gopls = {
+			analyses = {
+				unusedparams = true,
+			},
+			staticcheck = true,
+		},
+	},
 }
+
 require('lspconfig').sumneko_lua.setup {
     capabilities = capabilities
 }
