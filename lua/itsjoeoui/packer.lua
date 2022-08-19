@@ -20,4 +20,15 @@ return require('packer').startup(function(use)
     use("hrsh7th/cmp-buffer")
 
     use("L3MON4D3/LuaSnip")
+    use {
+        'lewis6991/gitsigns.nvim',
+        config = function()
+            require('gitsigns').setup{
+                signcolumn = true,
+                current_line_blame = true,
+                numhl = true,
+            }
+        end
+    }
+
 end)
