@@ -10,7 +10,7 @@ neogit.setup {
     disable_signs = false,
     disable_hint = false,
     disable_context_highlighting = false,
-    disable_commit_confirmation = true,
+    disable_commit_confirmation = false,
     -- Neogit refreshes its internal state after specific events, which can be expensive depending on the repository size.
     -- Disabling `auto_refresh` will make it so you have to manually refresh the status after you open it.
     auto_refresh = true,
@@ -72,14 +72,4 @@ neogit.setup {
             folded = true
         },
     },
-    -- override/add mappings
-    mappings = {
-        -- modify status buffer mappings
-        status = {
-            -- Adds a mapping with "B" as key that does the "BranchPopup" command
-            ["B"] = "BranchPopup",
-            -- Removes the default mapping of "s"
-            ["s"] = "",
-        }
-    }
 }
