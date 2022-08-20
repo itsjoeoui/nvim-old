@@ -90,8 +90,12 @@ _G.packer_plugins = {
     path = "/Users/itsjoeoui/.local/share/nvim/site/pack/packer/start/cmp-tabnine",
     url = "https://github.com/tzachar/cmp-tabnine"
   },
+  ["git-worktree.nvim"] = {
+    loaded = true,
+    path = "/Users/itsjoeoui/.local/share/nvim/site/pack/packer/start/git-worktree.nvim",
+    url = "https://github.com/ThePrimeagen/git-worktree.nvim"
+  },
   ["gitsigns.nvim"] = {
-    config = { "\27LJ\2\nd\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\3\23current_line_blame\2\15signcolumn\2\nnumhl\2\nsetup\rgitsigns\frequire\0" },
     loaded = true,
     path = "/Users/itsjoeoui/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
@@ -102,7 +106,6 @@ _G.packer_plugins = {
     url = "https://github.com/onsails/lspkind-nvim"
   },
   ["lspsaga.nvim"] = {
-    config = { "\27LJ\2\n}\0\0\4\0\b\0\f6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\a\0006\3\3\0009\3\4\0039\3\5\0039\3\6\3=\3\5\2B\0\2\1K\0\1\0\1\0\0\nERROR\rseverity\15diagnostic\bvim\14goto_prev\23lspsaga.diagnostic\frequire}\0\0\4\0\b\0\f6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\a\0006\3\3\0009\3\4\0039\3\5\0039\3\6\3=\3\5\2B\0\2\1K\0\1\0\1\0\0\nERROR\rseverity\15diagnostic\bvim\14goto_next\23lspsaga.diagnostic\frequire4\0\0\3\1\1\0\5-\0\0\0009\0\0\0)\2\1\0B\0\2\1K\0\1\0\2À\27smart_scroll_with_saga4\0\0\3\1\1\0\5-\0\0\0009\0\0\0)\2ÿÿB\0\2\1K\0\1\0\2À\27smart_scroll_with_saga’\t\1\0\t\0007\0q6\0\0\0009\0\1\0009\0\2\0006\1\3\0'\3\4\0B\1\2\0029\2\5\1B\2\1\1\18\2\0\0'\4\6\0'\5\a\0'\6\b\0005\a\t\0B\2\5\1\18\2\0\0'\4\6\0'\5\n\0'\6\v\0005\a\f\0B\2\5\1\18\2\0\0'\4\r\0'\5\n\0'\6\14\0005\a\15\0B\2\5\1\18\2\0\0'\4\6\0'\5\16\0'\6\17\0005\a\18\0B\2\5\1\18\2\0\0'\4\6\0'\5\19\0'\6\20\0005\a\21\0B\2\5\1\18\2\0\0'\4\6\0'\5\22\0'\6\23\0005\a\24\0B\2\5\1\18\2\0\0'\4\6\0'\5\22\0'\6\25\0005\a\26\0B\2\5\1\18\2\0\0'\4\6\0'\5\27\0'\6\28\0005\a\29\0B\2\5\1\18\2\0\0'\4\6\0'\5\30\0'\6\31\0005\a \0B\2\5\1\18\2\0\0'\4\6\0'\5!\0003\6\"\0005\a#\0B\2\5\1\18\2\0\0'\4\6\0'\5$\0003\6%\0005\a&\0B\2\5\1\18\2\0\0'\4\6\0'\5'\0'\6(\0005\a)\0B\2\5\1\18\2\0\0'\4\6\0'\5*\0'\6+\0005\a,\0B\2\5\1\18\2\0\0'\4\6\0'\5-\0'\6.\0005\a/\0B\2\5\0016\2\3\0'\0040\0B\2\2\0026\3\0\0009\3\1\0039\3\2\3'\5\6\0'\0061\0003\a2\0005\b3\0B\3\5\0016\3\0\0009\3\1\0039\3\2\3'\5\6\0'\0064\0003\a5\0005\b6\0B\3\5\0012\0\0€K\0\1\0\1\0\1\vsilent\2\0\n<C-b>\1\0\1\vsilent\2\0\n<C-f>\19lspsaga.action\1\0\1\vsilent\2$<Cmd>Lspsaga signature_help<CR>\ags\1\0\1\vsilent\2\31<cmd>Lspsaga hover_doc<CR>\6K\1\0\1\vsilent\2\29<cmd>LSoutlineToggle<CR>\14<leader>o\1\0\1\vsilent\2\0\a]E\1\0\1\vsilent\2\0\a[E\1\0\1\vsilent\2*<cmd>Lspsaga diagnostic_jump_prev<CR>\a]e\1\0\1\vsilent\2*<cmd>Lspsaga diagnostic_jump_next<CR>\a[e\1\0\1\vsilent\2-<cmd>Lspsaga show_cursor_diagnostics<CR>\1\0\1\vsilent\2+<cmd>Lspsaga show_line_diagnostics<CR>\15<leader>cd\1\0\1\vsilent\2(<cmd>Lspsaga preview_definition<CR>\agd\1\0\1\vsilent\2\28<cmd>Lspsaga rename<CR>\agr\1\0\1\vsilent\2,<cmd><C-U>Lspsaga range_code_action<CR>\6v\1\0\1\vsilent\2!<cmd>Lspsaga code_action<CR>\15<leader>ca\1\0\1\vsilent\2 <cmd>Lspsaga lsp_finder<CR>\agh\6n\18init_lsp_saga\flspsaga\frequire\bset\vkeymap\bvim\0" },
     loaded = true,
     path = "/Users/itsjoeoui/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
     url = "https://github.com/glepnir/lspsaga.nvim"
@@ -160,18 +163,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: gitsigns.nvim
-time([[Config for gitsigns.nvim]], true)
-try_loadstring("\27LJ\2\nd\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\3\23current_line_blame\2\15signcolumn\2\nnumhl\2\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
-time([[Config for gitsigns.nvim]], false)
 -- Config for: cmp-tabnine
 time([[Config for cmp-tabnine]], true)
 try_loadstring("\27LJ\2\nd\0\0\5\0\6\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0004\3\3\0005\4\3\0>\4\1\3=\3\5\2B\0\2\1K\0\1\0\fsources\1\0\0\1\0\1\tname\16cmp_tabnine\nsetup\bcmp\frequire\0", "config", "cmp-tabnine")
 time([[Config for cmp-tabnine]], false)
--- Config for: lspsaga.nvim
-time([[Config for lspsaga.nvim]], true)
-try_loadstring("\27LJ\2\n}\0\0\4\0\b\0\f6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\a\0006\3\3\0009\3\4\0039\3\5\0039\3\6\3=\3\5\2B\0\2\1K\0\1\0\1\0\0\nERROR\rseverity\15diagnostic\bvim\14goto_prev\23lspsaga.diagnostic\frequire}\0\0\4\0\b\0\f6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\a\0006\3\3\0009\3\4\0039\3\5\0039\3\6\3=\3\5\2B\0\2\1K\0\1\0\1\0\0\nERROR\rseverity\15diagnostic\bvim\14goto_next\23lspsaga.diagnostic\frequire4\0\0\3\1\1\0\5-\0\0\0009\0\0\0)\2\1\0B\0\2\1K\0\1\0\2À\27smart_scroll_with_saga4\0\0\3\1\1\0\5-\0\0\0009\0\0\0)\2ÿÿB\0\2\1K\0\1\0\2À\27smart_scroll_with_saga’\t\1\0\t\0007\0q6\0\0\0009\0\1\0009\0\2\0006\1\3\0'\3\4\0B\1\2\0029\2\5\1B\2\1\1\18\2\0\0'\4\6\0'\5\a\0'\6\b\0005\a\t\0B\2\5\1\18\2\0\0'\4\6\0'\5\n\0'\6\v\0005\a\f\0B\2\5\1\18\2\0\0'\4\r\0'\5\n\0'\6\14\0005\a\15\0B\2\5\1\18\2\0\0'\4\6\0'\5\16\0'\6\17\0005\a\18\0B\2\5\1\18\2\0\0'\4\6\0'\5\19\0'\6\20\0005\a\21\0B\2\5\1\18\2\0\0'\4\6\0'\5\22\0'\6\23\0005\a\24\0B\2\5\1\18\2\0\0'\4\6\0'\5\22\0'\6\25\0005\a\26\0B\2\5\1\18\2\0\0'\4\6\0'\5\27\0'\6\28\0005\a\29\0B\2\5\1\18\2\0\0'\4\6\0'\5\30\0'\6\31\0005\a \0B\2\5\1\18\2\0\0'\4\6\0'\5!\0003\6\"\0005\a#\0B\2\5\1\18\2\0\0'\4\6\0'\5$\0003\6%\0005\a&\0B\2\5\1\18\2\0\0'\4\6\0'\5'\0'\6(\0005\a)\0B\2\5\1\18\2\0\0'\4\6\0'\5*\0'\6+\0005\a,\0B\2\5\1\18\2\0\0'\4\6\0'\5-\0'\6.\0005\a/\0B\2\5\0016\2\3\0'\0040\0B\2\2\0026\3\0\0009\3\1\0039\3\2\3'\5\6\0'\0061\0003\a2\0005\b3\0B\3\5\0016\3\0\0009\3\1\0039\3\2\3'\5\6\0'\0064\0003\a5\0005\b6\0B\3\5\0012\0\0€K\0\1\0\1\0\1\vsilent\2\0\n<C-b>\1\0\1\vsilent\2\0\n<C-f>\19lspsaga.action\1\0\1\vsilent\2$<Cmd>Lspsaga signature_help<CR>\ags\1\0\1\vsilent\2\31<cmd>Lspsaga hover_doc<CR>\6K\1\0\1\vsilent\2\29<cmd>LSoutlineToggle<CR>\14<leader>o\1\0\1\vsilent\2\0\a]E\1\0\1\vsilent\2\0\a[E\1\0\1\vsilent\2*<cmd>Lspsaga diagnostic_jump_prev<CR>\a]e\1\0\1\vsilent\2*<cmd>Lspsaga diagnostic_jump_next<CR>\a[e\1\0\1\vsilent\2-<cmd>Lspsaga show_cursor_diagnostics<CR>\1\0\1\vsilent\2+<cmd>Lspsaga show_line_diagnostics<CR>\15<leader>cd\1\0\1\vsilent\2(<cmd>Lspsaga preview_definition<CR>\agd\1\0\1\vsilent\2\28<cmd>Lspsaga rename<CR>\agr\1\0\1\vsilent\2,<cmd><C-U>Lspsaga range_code_action<CR>\6v\1\0\1\vsilent\2!<cmd>Lspsaga code_action<CR>\15<leader>ca\1\0\1\vsilent\2 <cmd>Lspsaga lsp_finder<CR>\agh\6n\18init_lsp_saga\flspsaga\frequire\bset\vkeymap\bvim\0", "config", "lspsaga.nvim")
-time([[Config for lspsaga.nvim]], false)
 if should_profile then save_profiles() end
 
 end)
