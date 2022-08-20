@@ -18,6 +18,19 @@ return require('packer').startup(function(use)
     use("hrsh7th/nvim-cmp")
     use("hrsh7th/cmp-nvim-lsp")
     use("hrsh7th/cmp-buffer")
+    use {
+        'tzachar/cmp-tabnine',
+        run='./install.sh',
+        requires = 'hrsh7th/nvim-cmp',
+        config = function()
+            require'cmp'.setup {
+                sources = {
+                    { name = 'cmp_tabnine' },
+                },
+            }
+        end
+    }
+    use("onsails/lspkind-nvim")
 
     use("L3MON4D3/LuaSnip")
     use {
