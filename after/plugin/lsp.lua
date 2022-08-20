@@ -4,11 +4,11 @@ local cmp = require'cmp'
 
 
 local source_mapping = {
-	buffer = "[Buffer]",
-	nvim_lsp = "[LSP]",
-	nvim_lua = "[Lua]",
-	cmp_tabnine = "[TN]",
-	path = "[Path]",
+    buffer = "[Buffer]",
+    nvim_lsp = "[LSP]",
+    nvim_lua = "[Lua]",
+    cmp_tabnine = "[TN]",
+    path = "[Path]",
 }
 local lspkind = require("lspkind")
 
@@ -34,20 +34,20 @@ cmp.setup({
         ['<C-e>'] = cmp.mapping.abort(),
         ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
-    	formatting = {
-		format = function(entry, vim_item)
-			vim_item.kind = lspkind.presets.default[vim_item.kind]
-			local menu = source_mapping[entry.source.name]
-			if entry.source.name == "cmp_tabnine" then
-				if entry.completion_item.data ~= nil and entry.completion_item.data.detail ~= nil then
-					menu = entry.completion_item.data.detail .. " " .. menu
-				end
-				vim_item.kind = ""
-			end
-			vim_item.menu = menu
-			return vim_item
-		end,
-	},
+    formatting = {
+        format = function(entry, vim_item)
+            vim_item.kind = lspkind.presets.default[vim_item.kind]
+            local menu = source_mapping[entry.source.name]
+            if entry.source.name == "cmp_tabnine" then
+                if entry.completion_item.data ~= nil and entry.completion_item.data.detail ~= nil then
+                    menu = entry.completion_item.data.detail .. " " .. menu
+                end
+                vim_item.kind = ""
+            end
+            vim_item.menu = menu
+            return vim_item
+        end,
+    },
 
     sources = cmp.config.sources({
         { name = "cmp_tabnine" },
@@ -102,15 +102,15 @@ require('lspconfig').bashls.setup {
 }
 require("lspconfig").gopls.setup {
     capabilities = capabilities,
-	cmd = { "gopls", "serve" },
-	settings = {
-		gopls = {
-			analyses = {
-				unusedparams = true,
-			},
-			staticcheck = true,
-		},
-	},
+    cmd = { "gopls", "serve" },
+    settings = {
+        gopls = {
+            analyses = {
+                unusedparams = true,
+            },
+            staticcheck = true,
+        },
+    },
 }
 
 require('lspconfig').sumneko_lua.setup {

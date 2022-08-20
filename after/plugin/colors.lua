@@ -1,7 +1,7 @@
 vim.g.itsjoeoui_colorscheme = "tokyonight"
 
 function CureMyEyes()
---    vim.g.tokyonight_transparent_sidebar = true
+    --    vim.g.tokyonight_transparent_sidebar = true
     vim.g.tokyonight_transparent = true
     vim.g.tokyonight_dark_sidebar = true
 
