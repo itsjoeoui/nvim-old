@@ -186,3 +186,15 @@ end, { silent = true })
 vim.keymap.set("n", "<C-b>", function()
     action.smart_scroll_with_saga(-1)
 end, { silent = true })
+
+-- float terminal also you can pass the cli command in open_float_terminal function
+local term = require("lspsaga.floaterm")
+
+-- float terminal also you can pass the cli command in open_float_terminal function
+vim.keymap.set("n", "tt", function()
+    term.open_float_terminal()
+end, { silent = true })
+vim.keymap.set("t", "tt", function()
+    vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<C-\\><C-n>", true, false, true))
+    term.close_float_terminal()
+end, { silent = true })
