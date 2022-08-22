@@ -133,6 +133,7 @@ require('lspconfig').sumneko_lua.setup {
 		},
 	},
 }
+require('lspconfig').dockerls.setup{}
 
 local tabnine = require('cmp_tabnine.config')
 
