@@ -13,6 +13,7 @@ map('n', 'fg', ':Telescope live_grep<CR>')
 map('n', 'fb', ':Telescope buffers<CR>')
 map('n', 'fh', ':Telescope help_tags<CR>')
 map('n', 'fw', "<cmd>lua require('telescope').extensions.git_worktree.git_worktrees()<CR>")
+map('n', 'fc', "<cmd>lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>")
 
 map('n', 'vs', ':vs<CR>')
 map('n', 'sp', ':sp<CR>')

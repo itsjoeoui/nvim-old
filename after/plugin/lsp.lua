@@ -1,4 +1,3 @@
---require'lspconfig'.pyright.setup{}
 -- Setup nvim-cmp.
 local cmp = require 'cmp'
 
