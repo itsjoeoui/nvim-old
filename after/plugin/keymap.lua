@@ -8,7 +8,7 @@ end
 
 map('i', 'jk', '<Esc>')
 
-map('n', 'ff', ':Telescope find_files<CR>')
+map('n', 'ff', ':Telescope find_files no_ignore=true<CR>')
 map('n', 'fg', ':Telescope live_grep<CR>')
 map('n', 'fb', ':Telescope buffers<CR>')
 map('n', 'fh', ':Telescope help_tags<CR>')
@@ -22,10 +22,16 @@ map('n', '<C-L>', '<C-W><C-L>')
 map('n', '<C-H>', '<C-W><C-H>')
 map('n', '<C-K>', '<C-W><C-K>')
 map('n', '<C-J>', '<C-W><C-J>')
+
 map('n', 'tn', ':tabnew<CR>')
 map('n', 'tl', ':tabnext<CR>')
 map('n', 'th', ':tabprev<CR>')
 map('n', 'to', ':tabo<CR>')
 map('n', 'tw', ':tabclose<CR>')
+
+map('i', '<C-L>', '<Right>')
+map('i', '<C-H>', '<Left>')
+map('i', '<C-K>', '<Up>')
+map('i', '<C-J>', '<Down>')
 
 map('n', '<C-S>', ':%s/')
