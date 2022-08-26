@@ -50,3 +50,5 @@ map('n', '<leader>9', '9gt<CR>')
 
 map('n', '<leader>t', ':NvimTreeToggle<CR>')
 map('n', '<leader><CR>', ':so ~/.config/nvim/init.lua<CR>')
+
+map('n', '<leader>p', '"_dP')
