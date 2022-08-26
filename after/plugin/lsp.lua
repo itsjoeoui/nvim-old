@@ -240,10 +240,10 @@ end, { silent = true })
 local term = require("lspsaga.floaterm")
 
 -- float terminal also you can pass the cli command in open_float_terminal function
-vim.keymap.set("n", "tt", function()
+vim.keymap.set("n", "<leader>'", function()
     term.open_float_terminal()
 end, { silent = true })
-vim.keymap.set("t", "tt", function()
+vim.keymap.set("t", "<leader>'", function()
     vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<C-\\><C-n>", true, false, true))
     term.close_float_terminal()
 end, { silent = true })
