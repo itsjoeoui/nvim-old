@@ -55,3 +55,6 @@ map('n', '<leader>p', '"_dP')
 map('n', '<leader>y', '"+y')
 map('v', '<leader>y', '"+y')
 map('n', '<leader>Y', 'gg"+yG')
+
+map('v', 'J', ":m '>+1<CR>gv=gv")
+map('v', 'K', ":m '<-2<CR>gv=gv")
