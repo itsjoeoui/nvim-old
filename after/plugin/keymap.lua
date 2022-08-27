@@ -10,7 +10,7 @@ vim.g.mapleader = " "
 
 map('i', 'jk', '<Esc>')
 
-map('n', 'ff', ':Telescope find_files no_ignore=true<CR>')
+map('n', 'ff', ':Telescope find_files<CR>')
 map('n', 'fg', ':Telescope live_grep<CR>')
 map('n', 'fb', ':Telescope buffers<CR>')
 map('n', 'fh', ':Telescope help_tags<CR>')
