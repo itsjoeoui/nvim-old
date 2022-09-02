@@ -59,4 +59,5 @@ return require("packer").startup(function(use)
 			require("nvim-autopairs").setup({})
 		end,
 	})
+	use("nvim-treesitter/nvim-treesitter-context")
 end)
