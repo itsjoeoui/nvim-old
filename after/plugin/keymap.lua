@@ -58,3 +58,8 @@ map("n", "<leader>Y", 'gg"+yG')
 
 map("v", "J", ":m '>+1<CR>gv=gv")
 map("v", "K", ":m '<-2<CR>gv=gv")
+
+map("n", "<leader>m", "<cmd>lua require('harpoon.mark').add_file()<CR>")
+map("n", "<leader>,", "<cmd>lua require('harpoon.ui').nav_prev()<CR>")
+map("n", "<leader>.", "<cmd>lua require('harpoon.ui').nav_next()<CR>")
+map("n", "<leader>p", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>")
