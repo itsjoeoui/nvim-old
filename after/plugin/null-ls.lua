@@ -11,7 +11,7 @@ null_ls.setup({
 	debug = false,
 	timeout_ms = 5000,
 	sources = {
-        formatting.stylua,
+		formatting.stylua,
 		formatting.shfmt,
 		formatting.autopep8,
 		formatting.google_java_format,

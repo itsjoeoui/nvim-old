@@ -46,6 +46,6 @@ keymap("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", { silent = true })
 keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
 
 -- Float terminal
-keymap("n", "<A-d>", "<cmd>Lspsaga open_floaterm<CR>", { silent = true })
+keymap("n", "<leader>'", "<cmd>Lspsaga open_floaterm<CR>", { silent = true })
 -- close floaterm
-keymap("t", "<A-d>", [[<C-\><C-n><cmd>Lspsaga close_floaterm<CR>]], { silent = true })
+keymap("t", "<leader>'", [[<C-\><C-n><cmd>Lspsaga close_floaterm<CR>]], { silent = true })
