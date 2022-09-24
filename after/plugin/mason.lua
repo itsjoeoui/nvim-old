@@ -6,7 +6,7 @@ mason.setup()
 
 mason_lspconfig.setup({
 	ensure_installed = {
-		"stylua",
+		"sumneko_lua",
 		"pyright",
 		"clangd",
 		"gopls",

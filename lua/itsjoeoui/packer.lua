@@ -24,7 +24,7 @@ return require("packer").startup(function(use)
 		"jose-elias-alvarez/null-ls.nvim",
 		requires = "nvim-lua/plenary.nvim",
 	})
-    use("onsails/lspkind.nvim")
+	use("onsails/lspkind.nvim")
 	use({
 		"glepnir/lspsaga.nvim",
 		branch = "main",
@@ -34,6 +34,7 @@ return require("packer").startup(function(use)
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-buffer")
+	use("hrsh7th/cmp-path")
 	use({
 		"tzachar/cmp-tabnine",
 		run = "./install.sh",
@@ -45,6 +46,10 @@ return require("packer").startup(function(use)
 				},
 			})
 		end,
+	})
+	use({
+		"L3MON4D3/LuaSnip",
+		tag = "v1.*",
 	})
 
 	-- Git

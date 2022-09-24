@@ -6,14 +6,13 @@ if not status then
 end
 
 local formatting = null_ls.builtins.formatting
-local hover = null_ls.builtins.hover
 
 null_ls.setup({
 	debug = false,
 	timeout_ms = 5000,
 	sources = {
+        formatting.stylua,
 		formatting.shfmt,
-		formatting.stylua,
 		formatting.autopep8,
 		formatting.google_java_format,
 		formatting.gofmt,
