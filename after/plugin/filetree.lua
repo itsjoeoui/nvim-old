@@ -1,9 +1,9 @@
 require("nvim-tree").setup({
-    view = {
-        mappings = {
-            list = {
-                {key = "f", action = ""},
-            }
-        }
-    }
+	view = {
+		mappings = {
+			list = {
+				{ key = "f", action = "" },
+			},
+		},
+	},
 })

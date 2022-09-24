@@ -1,23 +1,32 @@
 return require("packer").startup(function(use)
+	-- Package Manager
 	use("wbthomason/packer.nvim")
+
+	-- Theme
 	use("folke/tokyonight.nvim")
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = "kyazdani42/nvim-web-devicons",
+	})
+
+	-- Treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	})
+	use("nvim-treesitter/nvim-treesitter-context")
 
-	use({
-		"nvim-lualine/lualine.nvim",
-		requires = { "kyazdani42/nvim-web-devicons", opt = true },
-	})
-	use({
-		"nvim-telescope/telescope.nvim",
-		tag = "0.1.0",
-		-- or                            , branch = '0.1.x',
-		requires = { { "nvim-lua/plenary.nvim" } },
-	})
-
+	-- LSP
 	use("neovim/nvim-lspconfig")
+	use("williamboman/mason.nvim")
+	use("williamboman/mason-lspconfig.nvim")
+	use("neovim/nvim-lspconfig")
+	use({
+		"jose-elias-alvarez/null-ls.nvim",
+		requires = "nvim-lua/plenary.nvim",
+	})
+
+	-- CMP
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-buffer")
@@ -33,43 +42,26 @@ return require("packer").startup(function(use)
 			})
 		end,
 	})
-	use("onsails/lspkind-nvim")
 
-	use("L3MON4D3/LuaSnip")
+	-- Git
 	use("lewis6991/gitsigns.nvim")
-	use({ "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" })
-
 	use({
-		"glepnir/lspsaga.nvim",
-		branch = "main",
+		"TimUntersberger/neogit",
+		requires = "nvim-lua/plenary.nvim",
 	})
 
+	-- Others
+	use({
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.0",
+		requires = "nvim-lua/plenary.nvim",
+	})
 	use("ThePrimeagen/git-worktree.nvim")
-	use("sbdchd/neoformat")
-	use({
-		"kyazdani42/nvim-tree.lua",
-		requires = {
-			"kyazdani42/nvim-web-devicons", -- optional, for file icons
-		},
-		tag = "nightly", -- optional, updated every week. (see issue #1193)
-	})
-	use({
-		"windwp/nvim-autopairs",
-		config = function()
-			require("nvim-autopairs").setup({})
-		end,
-	})
-	use("nvim-treesitter/nvim-treesitter-context")
 	use("ThePrimeagen/harpoon")
 	use("glepnir/dashboard-nvim")
 	use({
-		"folke/which-key.nvim",
-		config = function()
-			require("which-key").setup({
-				-- your configuration comes here
-				-- or leave it empty to use the default settings
-				-- refer to the configuration section below
-			})
-		end,
+		"kyazdani42/nvim-tree.lua",
+		requires = "kyazdani42/nvim-web-devicons", -- optional, for file icons
+		tag = "nightly", -- optional, updated every week. (see issue #1193)
 	})
 end)

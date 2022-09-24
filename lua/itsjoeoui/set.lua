@@ -11,6 +11,6 @@ vim.opt.cursorline = true
 vim.opt.ignorecase = true
 vim.opt.hlsearch = true
 vim.opt.scrolloff = 8
-vim.opt.colorcolumn = '80'
+vim.opt.colorcolumn = "80"
 vim.opt.showmode = false
 vim.opt.showtabline = 2
