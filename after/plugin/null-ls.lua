@@ -7,6 +7,7 @@ end
 
 local formatting = null_ls.builtins.formatting
 local hover = null_ls.builtins.hover
+
 null_ls.setup({
 	debug = false,
 	timeout_ms = 5000,
@@ -43,6 +44,5 @@ null_ls.setup({
 			},
 			prefer_local = "node_modules/.bin",
 		}),
-		hover.dictionary,
 	},
 })

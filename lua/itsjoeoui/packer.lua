@@ -20,10 +20,14 @@ return require("packer").startup(function(use)
 	use("neovim/nvim-lspconfig")
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
-	use("neovim/nvim-lspconfig")
 	use({
 		"jose-elias-alvarez/null-ls.nvim",
 		requires = "nvim-lua/plenary.nvim",
+	})
+    use("onsails/lspkind.nvim")
+	use({
+		"glepnir/lspsaga.nvim",
+		branch = "main",
 	})
 
 	-- CMP
