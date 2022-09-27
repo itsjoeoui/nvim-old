@@ -45,6 +45,8 @@ mason_lspconfig.setup({
 		"rust_analyzer",
 		"dockerls",
 		"yamlls",
+		"jdtls",
+		"bashls",
 	},
 	automatic_installation = true,
 })
