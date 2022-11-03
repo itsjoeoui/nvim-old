@@ -120,12 +120,6 @@ _G.packer_plugins = {
     path = "/Users/itsjoeoui/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
   },
-  ["leap.nvim"] = {
-    config = { "\27LJ\2\nA\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\25add_default_mappings\tleap\frequire\0" },
-    loaded = true,
-    path = "/Users/itsjoeoui/.local/share/nvim/site/pack/packer/start/leap.nvim",
-    url = "https://github.com/ggandor/leap.nvim"
-  },
   ["lspkind.nvim"] = {
     loaded = true,
     path = "/Users/itsjoeoui/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
@@ -223,10 +217,6 @@ time([[Defining packer_plugins]], false)
 time([[Config for cmp-tabnine]], true)
 try_loadstring("\27LJ\2\nd\0\0\5\0\6\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0004\3\3\0005\4\3\0>\4\1\3=\3\5\2B\0\2\1K\0\1\0\fsources\1\0\0\1\0\1\tname\16cmp_tabnine\nsetup\bcmp\frequire\0", "config", "cmp-tabnine")
 time([[Config for cmp-tabnine]], false)
--- Config for: leap.nvim
-time([[Config for leap.nvim]], true)
-try_loadstring("\27LJ\2\nA\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\25add_default_mappings\tleap\frequire\0", "config", "leap.nvim")
-time([[Config for leap.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

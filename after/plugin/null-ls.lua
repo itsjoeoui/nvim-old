@@ -8,10 +8,14 @@ end
 local formatting = null_ls.builtins.formatting
 
 null_ls.setup({
+	--on_init = function(new_client, _)
+	--	new_client.offset_encoding = "utf-8"
+	--end,
 	debug = false,
 	timeout_ms = 5000,
 	sources = {
 		formatting.stylua,
+		formatting.rustfmt,
 		formatting.shfmt,
 		formatting.autopep8,
 		formatting.google_java_format,

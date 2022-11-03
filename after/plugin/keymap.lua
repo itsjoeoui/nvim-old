@@ -18,13 +18,13 @@ map("n", "fw", "<cmd>lua require('telescope').extensions.git_worktree.git_worktr
 map("n", "fc", "<cmd>lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>")
 map("n", "fb", ":Telescope file_browser<CR>")
 
--- map('n', 'vs', ':vs<CR>')
--- map('n', 'sp', ':sp<CR>')
+map("n", "<leader>sv", ":vs<CR>")
+map("n", "<leader>sh", ":sp<CR>")
 
--- map('n', '<C-L>', '<C-W><C-L>')
--- map('n', '<C-H>', '<C-W><C-H>')
--- map('n', '<C-K>', '<C-W><C-K>')
--- map('n', '<C-J>', '<C-W><C-J>')
+map("n", "<C-L>", "<C-W><C-L>")
+map("n", "<C-H>", "<C-W><C-H>")
+map("n", "<C-K>", "<C-W><C-K>")
+map("n", "<C-J>", "<C-W><C-J>")
 
 map("i", "<C-L>", "<Right>")
 map("i", "<C-H>", "<Left>")

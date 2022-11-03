@@ -74,10 +74,4 @@ return require("packer").startup(function(use)
 		tag = "nightly", -- optional, updated every week. (see issue #1193)
 	})
 	use("nvim-telescope/telescope-file-browser.nvim")
-	use({
-		"ggandor/leap.nvim",
-		config = function()
-			require("leap").add_default_mappings()
-		end,
-	})
 end)
