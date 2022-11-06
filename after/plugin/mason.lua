@@ -1,35 +1,11 @@
-local mason_lspconfig = require("mason-lspconfig")
-
 local mason = require("mason")
 
 mason.setup()
 
-local lsp_formatting = function(bufnr)
-	vim.lsp.buf.format({
-		filter = function(client)
-			-- apply whatever logic you want (in this example, we'll only use null-ls)
-			return client.name == "null-ls"
-		end,
-		bufnr = bufnr,
-	})
-end
+local mason_lspconfig = require("mason-lspconfig")
 
--- if you want to set up formatting on save, you can use this as a callback
-local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-
--- add to your shared on_attach callback
-local on_attach = function(client, bufnr)
+local on_attach = function(client)
 	client.server_capabilities.documentFormattingProvider = false
-	--	if client.supports_method("textDocument/formatting") then
-	--		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-	--		vim.api.nvim_create_autocmd("BufWritePre", {
-	--			group = augroup,
-	--			buffer = bufnr,
-	--			callback = function()
-	--				lsp_formatting(bufnr)
-	--			end,
-	--		})
-	--	end
 end
 
 mason_lspconfig.setup({
@@ -60,6 +36,36 @@ mason_lspconfig.setup_handlers({
 	end,
 })
 
-require("mason-null-ls").setup({
+local mason_null_ls = require("mason-null-ls")
+
+mason_null_ls.setup({
     automatic_setup = true,
 })
+
+require("mason-null-ls").setup({
+	ensure_installed = {
+		"stylua",
+		"jq",
+		"clang_format",
+		"staticcheck",
+		"shellcheck",
+		"shfmt",
+		"gofumpt",
+		"golines",
+		"goimports",
+		"black",
+	},
+})
+
+require("mason-null-ls").setup_handlers({
+	function(source_name, methods)
+		-- all sources with no handler get passed here
+		-- Keep original functionality of `automatic_setup = true`
+		require("mason-null-ls.automatic_setup")(source_name, methods)
+	end,
+})
+
+local null_ls = require("null-ls")
+
+-- will setup any installed and configured sources above
+null_ls.setup()

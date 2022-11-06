@@ -8,8 +8,6 @@ end
 
 vim.g.mapleader = " "
 
-map("i", "jk", "<Esc>")
-
 map("n", "ff", ":Telescope find_files<CR>")
 map("n", "fg", ":Telescope live_grep<CR>")
 map("n", "fb", ":Telescope buffers<CR>")
@@ -21,15 +19,10 @@ map("n", "fb", ":Telescope file_browser<CR>")
 map("n", "<leader>sv", ":vs<CR>")
 map("n", "<leader>sh", ":sp<CR>")
 
-map("n", "<C-L>", "<C-W><C-L>")
-map("n", "<C-H>", "<C-W><C-H>")
-map("n", "<C-K>", "<C-W><C-K>")
-map("n", "<C-J>", "<C-W><C-J>")
-
-map("i", "<C-L>", "<Right>")
-map("i", "<C-H>", "<Left>")
-map("i", "<C-K>", "<Up>")
-map("i", "<C-J>", "<Down>")
+--map("i", "<C-L>", "<Right>")
+--map("i", "<C-H>", "<Left>")
+--map("i", "<C-K>", "<Up>")
+--map("i", "<C-J>", "<Down>")
 
 map("n", "<C-S>", ":%s/")
 
@@ -49,7 +42,7 @@ map("n", "<leader>7", "7gt<CR>")
 map("n", "<leader>8", "8gt<CR>")
 map("n", "<leader>9", "9gt<CR>")
 
-map("n", "<leader>t", ":NvimTreeToggle<CR>")
+map("n", "<leader>t", ":jvimTreeToggle<CR>")
 map("n", "<leader><CR>", ":so ~/.config/nvim/init.lua<CR>")
 
 map("n", "<leader>p", '"_dP')
@@ -66,3 +59,4 @@ map("n", "<leader>.", "<cmd>lua require('harpoon.ui').nav_next()<CR>")
 map("n", "<leader>;", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>")
 
 map("n", "fm", "<cmd>lua vim.lsp.buf.format { async = true }<CR>")
+map("n", "<leader>g", ":Neogit<CR>")
