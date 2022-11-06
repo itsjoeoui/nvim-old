@@ -8,6 +8,7 @@ end
 
 vim.g.mapleader = " "
 
+-- f mappings
 map("n", "ff", ":Telescope find_files<CR>")
 map("n", "fg", ":Telescope live_grep<CR>")
 map("n", "fb", ":Telescope buffers<CR>")
@@ -16,15 +17,12 @@ map("n", "fw", "<cmd>lua require('telescope').extensions.git_worktree.git_worktr
 map("n", "fc", "<cmd>lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>")
 map("n", "fb", ":Telescope file_browser<CR>")
 
+map("n", "fm", "<cmd>lua vim.lsp.buf.format { async = true }<CR>")
+
+-- <leader> mappings
 map("n", "<leader>sv", ":vs<CR>")
 map("n", "<leader>sh", ":sp<CR>")
-
---map("i", "<C-L>", "<Right>")
---map("i", "<C-H>", "<Left>")
---map("i", "<C-K>", "<Up>")
---map("i", "<C-J>", "<Down>")
-
-map("n", "<C-S>", ":%s/")
+map("n", "<leader>sq", ":close<CR>")
 
 map("n", "<leader>n", ":tabnew<CR>")
 map("n", "<leader>l", ":tabnext<CR>")
@@ -50,13 +48,17 @@ map("n", "<leader>y", '"+y')
 map("v", "<leader>y", '"+y')
 map("n", "<leader>Y", 'gg"+yG')
 
-map("v", "J", ":m '>+1<CR>gv=gv")
-map("v", "K", ":m '<-2<CR>gv=gv")
-
 map("n", "<leader>m", "<cmd>lua require('harpoon.mark').add_file()<CR>")
 map("n", "<leader>,", "<cmd>lua require('harpoon.ui').nav_prev()<CR>")
 map("n", "<leader>.", "<cmd>lua require('harpoon.ui').nav_next()<CR>")
 map("n", "<leader>;", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>")
-
-map("n", "fm", "<cmd>lua vim.lsp.buf.format { async = true }<CR>")
 map("n", "<leader>g", ":Neogit<CR>")
+
+-- Control mappings
+map("n", "<C-S>", ":%s/")
+
+-- Other mappings
+map("v", "J", ":m '>+1<CR>gv=gv")
+map("v", "K", ":m '<-2<CR>gv=gv")
+
+map("n", "x", '"_x')
