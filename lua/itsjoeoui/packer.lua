@@ -24,6 +24,7 @@ return require("packer").startup(function(use)
 		"jose-elias-alvarez/null-ls.nvim",
 		requires = "nvim-lua/plenary.nvim",
 	})
+	use("jayp0521/mason-null-ls.nvim")
 	use("onsails/lspkind.nvim")
 	use({
 		"glepnir/lspsaga.nvim",

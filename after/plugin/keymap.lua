@@ -65,4 +65,4 @@ map("n", "<leader>,", "<cmd>lua require('harpoon.ui').nav_prev()<CR>")
 map("n", "<leader>.", "<cmd>lua require('harpoon.ui').nav_next()<CR>")
 map("n", "<leader>;", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>")
 
-map("n", "fm", "<cmd>lua vim.lsp.buf.formatting()<CR>")
+map("n", "fm", "<cmd>lua vim.lsp.buf.format { async = true }<CR>")

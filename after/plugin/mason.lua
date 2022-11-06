@@ -19,16 +19,17 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 -- add to your shared on_attach callback
 local on_attach = function(client, bufnr)
-	if client.supports_method("textDocument/formatting") then
-		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-		vim.api.nvim_create_autocmd("BufWritePre", {
-			group = augroup,
-			buffer = bufnr,
-			callback = function()
-				lsp_formatting(bufnr)
-			end,
-		})
-	end
+	client.server_capabilities.documentFormattingProvider = false
+	--	if client.supports_method("textDocument/formatting") then
+	--		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+	--		vim.api.nvim_create_autocmd("BufWritePre", {
+	--			group = augroup,
+	--			buffer = bufnr,
+	--			callback = function()
+	--				lsp_formatting(bufnr)
+	--			end,
+	--		})
+	--	end
 end
 
 mason_lspconfig.setup({
@@ -54,7 +55,11 @@ mason_lspconfig.setup({
 mason_lspconfig.setup_handlers({
 	function(server_name)
 		require("lspconfig")[server_name].setup({
-			--			on_attach = on_attach,
+			on_attach = on_attach,
 		})
 	end,
+})
+
+require("mason-null-ls").setup({
+    automatic_setup = true,
 })

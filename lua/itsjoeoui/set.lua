@@ -14,3 +14,5 @@ vim.opt.scrolloff = 8
 vim.opt.colorcolumn = "80"
 vim.opt.showmode = false
 vim.opt.showtabline = 2
+vim.g.encoding = "UTF-8"
+vim.o.fileencoding = "utf-8"
