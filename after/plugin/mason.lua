@@ -39,7 +39,7 @@ mason_lspconfig.setup_handlers({
 local mason_null_ls = require("mason-null-ls")
 
 mason_null_ls.setup({
-    automatic_setup = true,
+	automatic_setup = true,
 })
 
 require("mason-null-ls").setup({

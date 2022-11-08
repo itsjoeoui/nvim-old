@@ -40,7 +40,7 @@ map("n", "<leader>7", "7gt<CR>")
 map("n", "<leader>8", "8gt<CR>")
 map("n", "<leader>9", "9gt<CR>")
 
-map("n", "<leader>t", ":jvimTreeToggle<CR>")
+map("n", "<leader>t", ":nvimTreeToggle<CR>")
 map("n", "<leader><CR>", ":so ~/.config/nvim/init.lua<CR>")
 
 map("n", "<leader>p", '"_dP')
