@@ -54,6 +54,7 @@ require("mason-null-ls").setup({
 		"golines",
 		"goimports",
 		"black",
+        "prettier",
 	},
 })
 

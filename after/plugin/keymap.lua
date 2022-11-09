@@ -19,6 +19,9 @@ map("n", "fb", ":Telescope file_browser<CR>")
 
 map("n", "fm", "<cmd>lua vim.lsp.buf.format { async = true }<CR>")
 
+-- r mappings
+map("n", "rp", ":!python3 %<CR>")
+
 -- <leader> mappings
 map("n", "<leader>sv", ":vs<CR>")
 map("n", "<leader>sh", ":sp<CR>")
@@ -40,7 +43,7 @@ map("n", "<leader>7", "7gt<CR>")
 map("n", "<leader>8", "8gt<CR>")
 map("n", "<leader>9", "9gt<CR>")
 
-map("n", "<leader>t", ":nvimTreeToggle<CR>")
+map("n", "<leader>t", ":NvimTreeToggle<CR>")
 map("n", "<leader><CR>", ":so ~/.config/nvim/init.lua<CR>")
 
 map("n", "<leader>p", '"_dP')
