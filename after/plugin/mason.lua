@@ -24,6 +24,10 @@ mason_lspconfig.setup({
 		"yamlls",
 		"jdtls",
 		"bashls",
+		"astro",
+		"html",
+		"tailwindcss",
+		"marksman",
 	},
 	automatic_installation = true,
 })
@@ -54,7 +58,8 @@ require("mason-null-ls").setup({
 		"golines",
 		"goimports",
 		"black",
-        "prettier",
+		"prettier",
+		"markdownlint",
 	},
 })
 
@@ -70,3 +75,7 @@ local null_ls = require("null-ls")
 
 -- will setup any installed and configured sources above
 null_ls.setup()
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.offsetEncoding = { "utf-16" }
+require("lspconfig").clangd.setup({ capabilities = capabilities })
