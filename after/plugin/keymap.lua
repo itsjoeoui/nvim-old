@@ -59,6 +59,8 @@ map("n", "<leader>g", ":Neogit<CR>")
 
 -- Control mappings
 map("n", "<C-S>", ":%s/")
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
 
 -- Other mappings
 map("v", "J", ":m '>+1<CR>gv=gv")
