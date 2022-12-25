@@ -1,78 +1,66 @@
 return require("packer").startup(function(use)
-	-- Package Manager
-	use("wbthomason/packer.nvim")
+    -- Package Manager
+    use("wbthomason/packer.nvim")
 
-	-- Theme
-	use("folke/tokyonight.nvim")
-	use({
-		"nvim-lualine/lualine.nvim",
-		requires = "kyazdani42/nvim-web-devicons",
-	})
+    -- Theme
+    use("folke/tokyonight.nvim")
+    use({
+        "nvim-lualine/lualine.nvim",
+        requires = "kyazdani42/nvim-web-devicons",
+    })
 
-	-- Treesitter
-	use({
-		"nvim-treesitter/nvim-treesitter",
-		run = ":TSUpdate",
-	})
-	use("nvim-treesitter/nvim-treesitter-context")
+    -- Treesitter
+    use({
+        "nvim-treesitter/nvim-treesitter",
+        run = ":TSUpdate",
+    })
+    use("nvim-treesitter/nvim-treesitter-context")
 
-	-- LSP
-	use("neovim/nvim-lspconfig")
-	use("williamboman/mason.nvim")
-	use("williamboman/mason-lspconfig.nvim")
-	use({
-		"jose-elias-alvarez/null-ls.nvim",
-		requires = "nvim-lua/plenary.nvim",
-	})
-	use("jayp0521/mason-null-ls.nvim")
-	use("onsails/lspkind.nvim")
-	use({
-		"glepnir/lspsaga.nvim",
-		branch = "main",
-	})
+    -- LSP 
+    use({
+        "VonHeikemen/lsp-zero.nvim",
+        requires = {
+            -- LSP Support
+            { "neovim/nvim-lspconfig" },
+            { "williamboman/mason.nvim" },
+            { "williamboman/mason-lspconfig.nvim" },
 
-	-- CMP
-	use("hrsh7th/nvim-cmp")
-	use("hrsh7th/cmp-nvim-lsp")
-	use("hrsh7th/cmp-buffer")
-	use("hrsh7th/cmp-path")
-	use({
-		"tzachar/cmp-tabnine",
-		run = "./install.sh",
-		requires = "hrsh7th/nvim-cmp",
-		config = function()
-			require("cmp").setup({
-				sources = {
-					{ name = "cmp_tabnine" },
-				},
-			})
-		end,
-	})
-	use({
-		"L3MON4D3/LuaSnip",
-		tag = "v1.*",
-	})
+            -- Autocompletion
+            { "hrsh7th/nvim-cmp" },
+            { "hrsh7th/cmp-buffer" },
+            { "hrsh7th/cmp-path" },
+            { "saadparwaiz1/cmp_luasnip" },
+            { "hrsh7th/cmp-nvim-lsp" },
+            { "hrsh7th/cmp-nvim-lua" },
 
-	-- Git
-	use("lewis6991/gitsigns.nvim")
-	use({
-		"TimUntersberger/neogit",
-		requires = "nvim-lua/plenary.nvim",
-	})
+            -- Snippets
+            { "L3MON4D3/LuaSnip" },
+            { "rafamadriz/friendly-snippets" },
+        },
+    })
+    use({
+        "glepnir/lspsaga.nvim",
+        branch = "main",
+    })
 
-	-- Others
-	use({
-		"nvim-telescope/telescope.nvim",
-		tag = "0.1.0",
-		requires = "nvim-lua/plenary.nvim",
-	})
-	use("ThePrimeagen/git-worktree.nvim")
-	use("ThePrimeagen/harpoon")
-	use("glepnir/dashboard-nvim")
-	use({
-		"kyazdani42/nvim-tree.lua",
-		requires = "kyazdani42/nvim-web-devicons", -- optional, for file icons
-		tag = "nightly", -- optional, updated every week. (see issue #1193)
-	})
-	use("nvim-telescope/telescope-file-browser.nvim")
+    -- Git
+    use("lewis6991/gitsigns.nvim")
+    use({
+        "TimUntersberger/neogit",
+        requires = "nvim-lua/plenary.nvim",
+    })
+
+    -- Others
+    use({
+        "nvim-telescope/telescope.nvim",
+        tag = "0.1.0",
+        requires = "nvim-lua/plenary.nvim",
+    })
+    use("ThePrimeagen/harpoon")
+
+    use({
+        "kyazdani42/nvim-tree.lua",
+        requires = "kyazdani42/nvim-web-devicons", -- optional, for file icons
+        tag = "nightly", -- optional, updated every week. (see issue #1193)
+    })
 end)
