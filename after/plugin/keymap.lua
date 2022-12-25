@@ -61,6 +61,8 @@ map("n", "<leader>g", ":Neogit<CR>")
 map("n", "<C-S>", ":%s/")
 map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
+map("n", "n", "nzzzv")
+map("n", "N", "Nzzzv")
 
 -- Other mappings
 map("v", "J", ":m '>+1<CR>gv=gv")
