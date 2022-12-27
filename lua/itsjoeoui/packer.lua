@@ -16,7 +16,7 @@ return require("packer").startup(function(use)
     })
     use("nvim-treesitter/nvim-treesitter-context")
 
-    -- LSP 
+    -- LSP
     use({
         "VonHeikemen/lsp-zero.nvim",
         requires = {
@@ -63,4 +63,5 @@ return require("packer").startup(function(use)
         requires = "kyazdani42/nvim-web-devicons", -- optional, for file icons
         tag = "nightly", -- optional, updated every week. (see issue #1193)
     })
+    use({ 'christoomey/vim-tmux-navigator' })
 end)
