@@ -75,4 +75,3 @@ neogit.setup {
         }
     }
 }
-
