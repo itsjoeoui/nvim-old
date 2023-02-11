@@ -35,6 +35,7 @@ lsp.ensure_installed({
     'tsserver',
     'prismals',
     'pyright',
+    'rust_analyzer',
     'tailwindcss',
     'vimls',
     'yamlls',

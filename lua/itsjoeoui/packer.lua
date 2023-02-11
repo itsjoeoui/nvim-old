@@ -42,6 +42,7 @@ return require("packer").startup(function(use)
         "glepnir/lspsaga.nvim",
         branch = "main",
     })
+    use({"jose-elias-alvarez/null-ls.nvim"})
 
     -- Git
     use("lewis6991/gitsigns.nvim")
