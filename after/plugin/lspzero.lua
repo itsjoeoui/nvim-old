@@ -31,7 +31,7 @@ lsp.ensure_installed({
     'html',
     'jsonls',
     'jdtls',
-    'sumneko_lua',
+    'lua_ls',
     'tsserver',
     'prismals',
     'pyright',
