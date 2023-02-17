@@ -42,7 +42,7 @@ return require("packer").startup(function(use)
         "glepnir/lspsaga.nvim",
         branch = "main",
     })
-    use({"jose-elias-alvarez/null-ls.nvim"})
+    use({ "jose-elias-alvarez/null-ls.nvim" })
 
     -- Git
     use("lewis6991/gitsigns.nvim")
@@ -65,4 +65,22 @@ return require("packer").startup(function(use)
         tag = "nightly", -- optional, updated every week. (see issue #1193)
     })
     use({ 'christoomey/vim-tmux-navigator' })
+    use {
+        'goolord/alpha-nvim',
+        config = function()
+            require 'alpha'.setup(require 'alpha.themes.dashboard'.config)
+        end
+    }
+
+    use { "lukas-reineke/indent-blankline.nvim",
+        config = function()
+            require("indent_blankline").setup {
+                show_end_of_line = true,
+            }
+        end }
+    use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons',
+        config = function()
+            require("bufferline").setup {}
+        end
+    }
 end)
